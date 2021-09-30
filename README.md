@@ -10,13 +10,14 @@ https://github.com/frizb/Windows-Privilege-Escalation
 ## Usage
 Install from https://github.com/BravoTeam-CSEC473-01/WindowsPrivEsc.git
 
-Running in CMD:
+IMPORTANT!!
 ```
-C:\Temp\>powershell -ep bypass -c ". .\WindowsPrivEsc.ps1; Invoke-WindowsPrivEsc"
+Edit the ps1 file and put your username in the path variable on the second line,
+this is required so that the file can be downloaded to your desktop, a directory where the powershell
+script will not need to be run as administrator.
 ```
 
 Running from Powershell:
 ```
 PS C:\Temp\> Get-Content .\WindowsPrivEsc.ps1 | Out-String | IEX
-PS C:\Temp\> Invoke-WindowsPrivEscCheck
 ```
