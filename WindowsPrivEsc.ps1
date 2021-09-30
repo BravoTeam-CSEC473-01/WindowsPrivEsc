@@ -18,5 +18,5 @@ cd .\privesccheckmaster\PrivescCheck-master
 Get-Content .\PrivescCheck.ps1 | Out-String | IEX
 
 #Runs the script in extended mode and outputs a report of the possible escalations in .txt form
-Invoke-PrivescCheck -Extended -Report PrivescCheck_%COMPUTERNAME% -Format TXT
+Invoke-PrivescCheck -Extended -Report PrivescCheck_Report -Format TXT
 
