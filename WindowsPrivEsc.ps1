@@ -2,7 +2,7 @@
 $path = 'C:\Users\INSERTUSERNAMEHERE\Desktop\privesccheckmaster.zip' #EDIT THIS <--------------------------------------------------------------------------
 
 #Download the script
-Start-BitsTransfer -Source 'https://github.com/itm4n/PrivescCheck/archive/refs/heads/master.zip' -Destination $path'
+Start-BitsTransfer -Source 'https://github.com/itm4n/PrivescCheck/archive/refs/heads/master.zip' -Destination $path
 
 #Unpack
 Expand-Archive -Path 'privesccheckmaster.zip'
