@@ -1,24 +1,14 @@
 #Owen McCarthy - osm6495@rit.edu
+$path = 'C:\Users\INSERTUSERNAMEHERE\Desktop\privesccheckmaster.zip' #EDIT THIS <--------------------------------------------------------------------------
 
-#Download the PrivescCheck repo from GitHub (Basically a curl)
-Invoke-WebRequest -URI https://github.com/itm4n/PrivescCheck/archive/refs/heads/privesccheckmaster.zip
+#Download the script
+Start-BitsTransfer -Source 'https://github.com/itm4n/PrivescCheck/archive/refs/heads/master.zip' -Destination $path'
 
-#Unzip the repo (Should go to the same directory, if someone wants to change where the ouput goes you can do that here)
-Expand-Archive -Path privesccheckmaster.zip
+#Unpack
+Expand-Archive -Path 'privesccheckmaster.zip'
 
-##############
-# Quick Wins #
-##############
-
-whoami
-systeminfo
-
-#If we can use WMIC, get service and application details
-wmic service list full > services.txt
-tasklist > processes.txt
-
-#Has autopassword been set
-reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+#Move into new directory
+cd .\privesccheckmaster\PrivescCheck-master
 
 #######################
 # PrivescCheck Script #
